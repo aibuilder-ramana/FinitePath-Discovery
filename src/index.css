@@ -1,0 +1,42 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --fp-teal:        #00BFA5;
+  --fp-teal-light:  #26C6AA;
+  --fp-teal-dim:    rgba(0,191,165,.18);
+  --fp-teal-faint:  rgba(0,191,165,.07);
+  --fp-navy:        #07100E;
+  --fp-dark:        #0D1A16;
+  --fp-panel:       #0F2019;
+  --fp-border:      rgba(255,255,255,.07);
+  --fp-border-teal: rgba(0,191,165,.16);
+  --fp-text:        rgba(255,255,255,.88);
+  --fp-sub:         rgba(255,255,255,.42);
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: var(--fp-navy);
+  color: var(--fp-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%,80%,100% { transform: translateY(0); }
+  40%         { transform: translateY(-5px); }
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50%     { opacity: .3; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
