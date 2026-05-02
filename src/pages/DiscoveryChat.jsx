@@ -541,9 +541,9 @@ export default function DiscoveryChat() {
       responses,
     }
     try {
-      const existing = JSON.parse(localStorage.getItem('fp_discovery_submissions') || '[]')
+      const existing = JSON.parse(localStorage.getItem('deju_discovery_submissions') || '[]')
       existing.push(submission)
-      localStorage.setItem('fp_discovery_submissions', JSON.stringify(existing))
+      localStorage.setItem('deju_discovery_submissions', JSON.stringify(existing))
     } catch (_) {}
     setSubmitted(true)
   }
@@ -588,7 +588,7 @@ export default function DiscoveryChat() {
       <nav className="dc-nav">
         <div className="dc-nav__logo">
           <div className="dc-nav__icon">✦</div>
-          <span className="dc-nav__brand">FinitePaths</span>
+          <span className="dc-nav__brand">Deju</span>
           <span className="dc-nav__badge">User Discovery</span>
         </div>
         <div className="dc-nav__right">
@@ -632,7 +632,7 @@ export default function DiscoveryChat() {
           <div className="dc-chat__topbar">
             <div className="dc-chat__av">✦</div>
             <div>
-              <div className="dc-chat__name">FP Discovery</div>
+              <div className="dc-chat__name">Deju Discovery</div>
               <div className="dc-chat__sub">User Research Assistant</div>
             </div>
             <div className="dc-online">
